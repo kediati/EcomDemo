@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/shopping_item_total_amount"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="0"
+        android:layout_margin="16dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="right"
+        style="@style/MaterialAlertDialog.Material3.Body.Text"
+        />
+
+    <ImageButton
+        android:id="@+id/si_add_quantity"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="@+id/shopping_item_total_amount"
+        app:layout_constraintEnd_toStartOf="@id/shopping_item_total_amount"
+        app:layout_constraintTop_toTopOf="@+id/shopping_item_total_amount" />
+
+    <TextView
+        android:id="@+id/si_quantity_label"
+        style="@style/MaterialAlertDialog.Material3.Body.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/shopping_item_total_amount"
+        app:layout_constraintEnd_toStartOf="@id/si_add_quantity"
+        app:layout_constraintTop_toTopOf="@+id/shopping_item_total_amount"
+        android:layout_marginRight="8dp"
+        />
+    <ImageButton
+        android:id="@+id/si_subtract_quantity"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="@+id/shopping_item_total_amount"
+        app:layout_constraintEnd_toStartOf="@id/si_quantity_label"
+        app:layout_constraintTop_toTopOf="@+id/shopping_item_total_amount"
+        android:layout_marginRight="8dp"
+        />
+    <TextView
+        android:id="@+id/si_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="256dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxLength="24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/shopping_item_total_amount"
+        app:layout_constraintTop_toTopOf="@+id/shopping_item_total_amount"
+        android:text="Item 1"
+        android:layout_alignParentEnd="true"
+        android:gravity="right"
+        style="@style/MaterialAlertDialog.Material3.Body.Text"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
